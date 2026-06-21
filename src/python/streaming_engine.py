@@ -104,12 +104,20 @@ def process_micro_batch(df, epoch_id):
     Process each Spark micro-batch: update C++ LOB, run ML filter,
     if suspicious, run C++ Alpha-Beta parallel analysis.
     """
+    global global_lob
     with _batch_lock:
         rows = df.collect()
         if not rows:
             return
 
         logger.info(f"--- Bắt đầu xử lý Batch ID: {epoch_id} ({len(rows)} events) ---")
+
+        snapshot_rows = [row for row in rows if row.asDict().get("is_snapshot")]
+        if snapshot_rows:
+            rows = [snapshot_rows[-1]]
+            global_lob = lob_core.LOB()
+            global_lob.set_market_order_volume(100)
+            logger.info("Nhận Binance depth snapshot. Rebuild LOB từ snapshot mới nhất trong batch.")
 
         orders_before = set(o.id for o in global_lob.get_all_orders())
 
@@ -156,10 +164,10 @@ def process_micro_batch(df, epoch_id):
         best_bid = global_lob.get_best_bid()
         best_ask = global_lob.get_best_ask()
         spread = global_lob.get_spread()
-        spread_str = f"{spread:.2f}" if not np.isinf(spread) else "INF"
+        spread_str = f"{spread:.8f}" if not np.isinf(spread) else "INF"
         if spread < 0:
-            spread_str = f"CROSSED({spread:.2f})"
-        logger.info(f"LOB Snapshot -> Best Bid: {best_bid:.2f} | Best Ask: {best_ask:.2f} | Spread: {spread_str}")
+            spread_str = f"CROSSED({spread:.8f})"
+        logger.info(f"LOB Snapshot -> Best Bid: {best_bid:.8f} | Best Ask: {best_ask:.8f} | Spread: {spread_str}")
 
         if global_lob.is_empty() or best_bid == 0 or best_ask == 0:
             logger.info("Sổ lệnh chưa đủ dữ liệu. Bỏ qua.")
@@ -279,12 +287,13 @@ def main():
     global ml_model
 
     from pyspark.sql import SparkSession
-    from pyspark.sql.types import StructType, StructField, StringType, LongType, ArrayType
+    from pyspark.sql.types import StructType, StructField, StringType, LongType, ArrayType, BooleanType
     from pyspark.sql.functions import col, from_json
 
     redis_host = os.environ.get('REDIS_HOST', 'localhost')
     redis_port = os.environ.get('REDIS_PORT', '6379')
     redis_stream = os.environ.get('REDIS_STREAM', 'binance:depth')
+    checkpoint_location = os.environ.get('SPARK_CHECKPOINT_LOCATION', '/tmp/binance_redis_checkpoint')
 
     if redis_available and rm:
         try:
@@ -319,7 +328,8 @@ def main():
         StructField("e", StringType(), True),
         StructField("E", LongType(), True),
         StructField("b", ArrayType(ArrayType(StringType())), True),
-        StructField("a", ArrayType(ArrayType(StringType())), True)
+        StructField("a", ArrayType(ArrayType(StringType())), True),
+        StructField("is_snapshot", BooleanType(), True)
     ])
 
     redis_stream_schema = StructType([
@@ -341,10 +351,10 @@ def main():
         .outputMode("append") \
         .foreachBatch(process_micro_batch) \
         .trigger(processingTime="5 seconds") \
-        .option("checkpointLocation", "/tmp/binance_redis_checkpoint") \
+        .option("checkpointLocation", checkpoint_location) \
         .start()
 
-    logger.info(f"Listening on Redis Stream '{redis_stream}'. Run binance_ws.py separately.")
+    logger.info(f"Listening on Redis Stream '{redis_stream}'. Checkpoint: {checkpoint_location}. Run binance_ws.py separately.")
 
     try:
         query.awaitTermination()
