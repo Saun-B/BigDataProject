@@ -1,0 +1,14 @@
+{
+  "status": "SPOOFING_AND_WASH_TRADING",
+  "severity": "CRITICAL",
+  "ringleader": "ACC_RINGLEADER",
+  "community": [
+    "ACC_1",
+    "ACC_2",
+    "ACC_3",
+    "ACC_RINGLEADER"
+  ],
+  "avg_risk": 149.26,
+  "max_risk": 151.67,
+  "prob_spoofing": 1.0
+}

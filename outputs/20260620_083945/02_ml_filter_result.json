@@ -1,0 +1,11 @@
+{
+  "features": {
+    "spread": 10.0,
+    "bid_vol": 50050,
+    "ask_vol": 20,
+    "imbalance": 0.9992011184341921,
+    "cancel_rate": 0.0
+  },
+  "prob_spoofing": 1.0,
+  "inference_ms": 1.097
+}

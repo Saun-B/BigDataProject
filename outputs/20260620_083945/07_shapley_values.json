@@ -1,0 +1,18 @@
+[
+  {
+    "account": "ACC_RINGLEADER",
+    "shapley_value": 453.416667
+  },
+  {
+    "account": "ACC_3",
+    "shapley_value": 273.533333
+  },
+  {
+    "account": "ACC_1",
+    "shapley_value": 149.966667
+  },
+  {
+    "account": "ACC_2",
+    "shapley_value": 123.083333
+  }
+]

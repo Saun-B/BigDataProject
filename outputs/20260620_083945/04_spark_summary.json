@@ -1,0 +1,9 @@
+{
+  "total_scenarios": 200,
+  "avg_risk": 149.26,
+  "max_risk": 151.67,
+  "min_risk": 147.46,
+  "stddev_risk": 0.7,
+  "p95_risk": 150.12,
+  "elapsed_seconds": 8.1281
+}

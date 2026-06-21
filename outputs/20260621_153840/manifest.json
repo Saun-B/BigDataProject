@@ -1,0 +1,16 @@
+{
+  "run_id": "20260621_153840",
+  "run_dir": "outputs/20260621_153840",
+  "files": [
+    "01_initial_lob_snapshot.json",
+    "02_ml_filter_result.json",
+    "03_scenario_results.csv",
+    "04_spark_summary.json",
+    "05_top5_scenarios.json",
+    "05_top5_scenarios.csv",
+    "06_wash_trading_community.json",
+    "07_shapley_values.json",
+    "07_shapley_values.csv",
+    "10_final_result.json"
+  ]
+}

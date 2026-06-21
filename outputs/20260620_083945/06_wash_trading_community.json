@@ -1,0 +1,53 @@
+{
+  "communities": [
+    [
+      "ACC_1",
+      "ACC_2",
+      "ACC_3",
+      "ACC_RINGLEADER"
+    ]
+  ],
+  "suspect_community": [
+    "ACC_1",
+    "ACC_2",
+    "ACC_3",
+    "ACC_RINGLEADER"
+  ],
+  "transactions": [
+    [
+      "ACC_1",
+      "ACC_2",
+      100
+    ],
+    [
+      "ACC_2",
+      "ACC_RINGLEADER",
+      150
+    ],
+    [
+      "ACC_RINGLEADER",
+      "ACC_1",
+      200
+    ],
+    [
+      "ACC_3",
+      "ACC_RINGLEADER",
+      300
+    ],
+    [
+      "ACC_RINGLEADER",
+      "ACC_3",
+      250
+    ],
+    [
+      "USER_A",
+      "USER_B",
+      50
+    ],
+    [
+      "USER_B",
+      "USER_C",
+      30
+    ]
+  ]
+}

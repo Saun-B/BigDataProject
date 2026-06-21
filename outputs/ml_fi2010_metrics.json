@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-06-21T17:36:04",
+  "train_csv": "data/ml/fi2010_train_features.csv",
+  "test_csv": "data/ml/fi2010_test_features.csv",
+  "model_output": "models/spoofing_rf_model.pkl",
+  "feature_columns": [
+    "spread",
+    "bid_vol",
+    "ask_vol",
+    "imbalance",
+    "cancel_rate"
+  ],
+  "train_summary": {
+    "total": 50000,
+    "normal_0": 48497,
+    "spoofing_1": 1503,
+    "spoofing_ratio_percent": 3.006
+  },
+  "test_summary": {
+    "total": 10000,
+    "normal_0": 9760,
+    "spoofing_1": 240,
+    "spoofing_ratio_percent": 2.4
+  },
+  "model": {
+    "type": "RandomForestClassifier",
+    "n_estimators": 200,
+    "max_depth": 10,
+    "class_weight": "balanced_subsample",
+    "random_state": 42
+  },
+  "metrics": {
+    "accuracy": 0.8461,
+    "precision": 0.11771630370806356,
+    "recall": 0.8333333333333334,
+    "f1": 0.20629190304280556,
+    "roc_auc": 0.9120141734972678,
+    "confusion_matrix": [
+      [
+        8261,
+        1499
+      ],
+      [
+        40,
+        200
+      ]
+    ]
+  },
+  "feature_importances": {
+    "spread": 0.027276024759164012,
+    "bid_vol": 0.325291486765354,
+    "ask_vol": 0.3039002022012418,
+    "imbalance": 0.31504550658119246,
+    "cancel_rate": 0.028486779693047658
+  }
+}

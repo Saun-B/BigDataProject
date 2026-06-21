@@ -1,0 +1,674 @@
+2026-06-21 17:47:13,086 [INFO] Đã tự động tạo consumer group 'spark-source' cho stream 'binance:depth' trên Redis.
+2026-06-21 17:47:13,088 [INFO] Khởi động Spark Structured Streaming Engine (Redis Streams)...
+Missing Python executable 'c:\Users\Mr Long\AppData\Local\Programs\Python\Python311\python.exe', defaulting to 'C:\Users\Mr Long\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyspark\bin\..' for SPARK_HOME environment variable. Please install Python or specify the correct Python executable in PYSPARK_DRIVER_PYTHON or PYSPARK_PYTHON environment variable to detect SPARK_HOME safely.
+:: loading settings :: url = jar:file:/C:/Users/Mr%20Long/AppData/Local/Programs/Python/Python311/Lib/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: C:\Users\Mr Long\.ivy2\cache
+The jars for the packages stored in: C:\Users\Mr Long\.ivy2\jars
+com.redislabs#spark-redis_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-5373b139-18dc-44fd-b486-9bba0c4b2f9f;1.0
+	confs: [default]
+	found com.redislabs#spark-redis_2.12;3.1.0 in central
+	found redis.clients#jedis;3.9.0 in central
+	found org.slf4j#slf4j-api;1.7.30 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 265ms :: artifacts dl 20ms
+	:: modules in use:
+	com.redislabs#spark-redis_2.12;3.1.0 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.slf4j#slf4j-api;1.7.30 from central in [default]
+	redis.clients#jedis;3.9.0 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   4   |   0   |   0   |   0   ||   4   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-5373b139-18dc-44fd-b486-9bba0c4b2f9f
+	confs: [default]
+	0 artifacts copied, 4 already retrieved (0kB/10ms)
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2026-06-21 17:47:27,326 [INFO] [ML Filter] Loaded Spark MLlib RandomForest model from D:\BigDataSang\models\spark_ml_rf
+2026-06-21 17:47:27,326 [INFO] ML filter model loaded: RandomForestClassificationModel
+2026-06-21 17:47:27,438 [INFO] Callback Server Starting
+2026-06-21 17:47:27,438 [INFO] Socket listening on ('127.0.0.1', 61008)
+2026-06-21 17:47:27,863 [INFO] Listening on Redis Stream 'binance:depth'. Run binance_ws.py separately.
+2026-06-21 17:47:45,583 [INFO] Python Server ready to receive messages
+2026-06-21 17:47:45,586 [INFO] Received command c on object id p0
+2026-06-21 17:47:45,898 [INFO] --- Bắt đầu xử lý Batch ID: 0 (7 events) ---
+2026-06-21 17:47:45,906 [INFO] LOB Snapshot -> Best Bid: 265.60 | Best Ask: 266.50 | Spread: 0.90
+2026-06-21 17:47:45,909 [INFO] [Feature Extraction] spread=0.9000, bid_vol=2000000.00, ask_vol=1481000.00, imbalance=0.1491, cancel_rate=0.0000
+[Stage 9:>                                                        (0 + 12) / 12][Stage 9:====================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:47:56,216 [INFO] Xác suất thao túng (ML): 14.24%
+2026-06-21 17:47:56,216 [INFO] Thị trường bình thường.
+2026-06-21 17:47:56,216 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:47:56,758 [INFO] Received command c on object id p0
+2026-06-21 17:47:56,871 [INFO] --- Bắt đầu xử lý Batch ID: 1 (112 events) ---
+2026-06-21 17:47:56,976 [INFO] LOB Snapshot -> Best Bid: 267.10 | Best Ask: 267.20 | Spread: 0.10
+2026-06-21 17:47:56,976 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2000000.00, ask_vol=1481000.00, imbalance=0.1491, cancel_rate=0.0952
+[Stage 11:>                                                       (0 + 12) / 12][Stage 11:============================>                            (6 + 6) / 12]                                                                                2026-06-21 17:48:06,452 [INFO] Xác suất thao túng (ML): 20.05%
+2026-06-21 17:48:06,452 [INFO] Thị trường bình thường.
+2026-06-21 17:48:06,452 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:48:06,951 [INFO] Received command c on object id p0
+2026-06-21 17:48:07,022 [INFO] --- Bắt đầu xử lý Batch ID: 2 (99 events) ---
+2026-06-21 17:48:07,119 [INFO] LOB Snapshot -> Best Bid: 267.00 | Best Ask: 267.10 | Spread: 0.10
+2026-06-21 17:48:07,124 [INFO] [Feature Extraction] spread=0.1000, bid_vol=1484000.00, ask_vol=1617000.00, imbalance=0.0429, cancel_rate=0.0152
+[Stage 13:>                                                       (0 + 12) / 12][Stage 13:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:48:16,368 [INFO] Xác suất thao túng (ML): 16.49%
+2026-06-21 17:48:16,368 [INFO] Thị trường bình thường.
+2026-06-21 17:48:16,368 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:48:16,863 [INFO] Received command c on object id p0
+2026-06-21 17:48:16,926 [INFO] --- Bắt đầu xử lý Batch ID: 3 (98 events) ---
+2026-06-21 17:48:17,018 [INFO] LOB Snapshot -> Best Bid: 267.10 | Best Ask: 267.20 | Spread: 0.10
+2026-06-21 17:48:17,023 [INFO] [Feature Extraction] spread=0.1000, bid_vol=1446000.00, ask_vol=2137000.00, imbalance=0.1929, cancel_rate=0.0303
+[Stage 15:>                                                       (0 + 12) / 12][Stage 15:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:48:26,192 [INFO] Xác suất thao túng (ML): 31.13%
+2026-06-21 17:48:26,192 [INFO] Thị trường bình thường.
+2026-06-21 17:48:26,192 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:48:26,666 [INFO] Received command c on object id p0
+2026-06-21 17:48:26,724 [INFO] --- Bắt đầu xử lý Batch ID: 4 (95 events) ---
+2026-06-21 17:48:26,833 [INFO] LOB Snapshot -> Best Bid: 267.20 | Best Ask: 267.30 | Spread: 0.10
+2026-06-21 17:48:26,839 [INFO] [Feature Extraction] spread=0.1000, bid_vol=1310000.00, ask_vol=1783000.00, imbalance=0.1529, cancel_rate=0.0299
+[Stage 17:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:48:35,947 [INFO] Xác suất thao túng (ML): 20.33%
+2026-06-21 17:48:35,947 [INFO] Thị trường bình thường.
+2026-06-21 17:48:35,947 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:48:36,499 [INFO] Received command c on object id p0
+2026-06-21 17:48:36,559 [INFO] --- Bắt đầu xử lý Batch ID: 5 (96 events) ---
+2026-06-21 17:48:36,655 [INFO] LOB Snapshot -> Best Bid: 268.80 | Best Ask: 268.90 | Spread: 0.10
+2026-06-21 17:48:36,662 [INFO] [Feature Extraction] spread=0.1000, bid_vol=1310000.00, ask_vol=2060000.00, imbalance=0.2226, cancel_rate=0.2051
+[Stage 19:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:48:45,961 [INFO] Xác suất thao túng (ML): 23.20%
+2026-06-21 17:48:45,961 [INFO] Thị trường bình thường.
+2026-06-21 17:48:45,961 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:48:46,471 [INFO] Received command c on object id p0
+2026-06-21 17:48:46,543 [INFO] --- Bắt đầu xử lý Batch ID: 6 (98 events) ---
+2026-06-21 17:48:46,620 [INFO] LOB Snapshot -> Best Bid: 268.20 | Best Ask: 268.30 | Spread: 0.10
+2026-06-21 17:48:46,629 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=1860000.00, imbalance=0.0592, cancel_rate=0.0494
+[Stage 21:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:48:56,068 [INFO] Xác suất thao túng (ML): 16.49%
+2026-06-21 17:48:56,068 [INFO] Thị trường bình thường.
+2026-06-21 17:48:56,068 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:48:56,541 [INFO] Received command c on object id p0
+2026-06-21 17:48:56,596 [INFO] --- Bắt đầu xử lý Batch ID: 7 (98 events) ---
+2026-06-21 17:48:56,675 [INFO] LOB Snapshot -> Best Bid: 268.20 | Best Ask: 268.30 | Spread: 0.10
+2026-06-21 17:48:56,682 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=1863000.00, imbalance=0.0584, cancel_rate=0.0247
+[Stage 23:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:49:05,938 [INFO] Xác suất thao túng (ML): 16.49%
+2026-06-21 17:49:05,938 [INFO] Thị trường bình thường.
+2026-06-21 17:49:05,938 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:49:06,407 [INFO] Received command c on object id p0
+2026-06-21 17:49:06,448 [INFO] --- Bắt đầu xử lý Batch ID: 8 (97 events) ---
+2026-06-21 17:49:06,529 [INFO] LOB Snapshot -> Best Bid: 267.50 | Best Ask: 267.60 | Spread: 0.10
+2026-06-21 17:49:06,539 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2338000.00, ask_vol=3154000.00, imbalance=0.1486, cancel_rate=0.0824
+[Stage 25:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:49:16,084 [INFO] Xác suất thao túng (ML): 30.63%
+2026-06-21 17:49:16,084 [INFO] Thị trường bình thường.
+2026-06-21 17:49:16,084 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:49:16,569 [INFO] Received command c on object id p0
+2026-06-21 17:49:16,616 [INFO] --- Bắt đầu xử lý Batch ID: 9 (99 events) ---
+2026-06-21 17:49:16,701 [INFO] LOB Snapshot -> Best Bid: 267.60 | Best Ask: 267.70 | Spread: 0.10
+2026-06-21 17:49:16,706 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=3154000.00, imbalance=0.2020, cancel_rate=0.0118
+[Stage 27:>                                                       (0 + 12) / 12][Stage 27:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:49:25,944 [INFO] Xác suất thao túng (ML): 34.57%
+2026-06-21 17:49:25,944 [INFO] Thị trường bình thường.
+2026-06-21 17:49:25,944 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:49:26,428 [INFO] Received command c on object id p0
+2026-06-21 17:49:26,476 [INFO] --- Bắt đầu xử lý Batch ID: 10 (96 events) ---
+2026-06-21 17:49:26,566 [INFO] LOB Snapshot -> Best Bid: 268.20 | Best Ask: 268.30 | Spread: 0.10
+2026-06-21 17:49:26,581 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=3154000.00, imbalance=0.2020, cancel_rate=0.0706
+[Stage 29:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:49:35,966 [INFO] Xác suất thao túng (ML): 34.85%
+2026-06-21 17:49:35,966 [INFO] Thị trường bình thường.
+2026-06-21 17:49:35,966 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:49:36,481 [INFO] Received command c on object id p0
+2026-06-21 17:49:36,521 [INFO] --- Bắt đầu xử lý Batch ID: 11 (98 events) ---
+2026-06-21 17:49:36,615 [INFO] LOB Snapshot -> Best Bid: 269.20 | Best Ask: 269.30 | Spread: 0.10
+2026-06-21 17:49:36,626 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=2054000.00, imbalance=0.0096, cancel_rate=0.1099
+[Stage 31:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:49:45,953 [INFO] Xác suất thao túng (ML): 11.37%
+2026-06-21 17:49:45,953 [INFO] Thị trường bình thường.
+2026-06-21 17:49:45,953 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:49:46,451 [INFO] Received command c on object id p0
+2026-06-21 17:49:46,497 [INFO] --- Bắt đầu xử lý Batch ID: 12 (98 events) ---
+2026-06-21 17:49:46,613 [INFO] LOB Snapshot -> Best Bid: 269.90 | Best Ask: 270.00 | Spread: 0.10
+2026-06-21 17:49:46,619 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=3286000.00, imbalance=0.2216, cancel_rate=0.0753
+[Stage 33:>                                                       (0 + 12) / 12][Stage 33:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:49:55,786 [INFO] Xác suất thao túng (ML): 36.47%
+2026-06-21 17:49:55,786 [INFO] Thị trường bình thường.
+2026-06-21 17:49:55,786 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:49:56,267 [INFO] Received command c on object id p0
+2026-06-21 17:49:56,320 [INFO] --- Bắt đầu xử lý Batch ID: 13 (96 events) ---
+2026-06-21 17:49:56,403 [INFO] LOB Snapshot -> Best Bid: 270.10 | Best Ask: 270.20 | Spread: 0.10
+2026-06-21 17:49:56,417 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=2065000.00, imbalance=0.0070, cancel_rate=0.0174
+[Stage 35:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:50:05,488 [INFO] Xác suất thao túng (ML): 13.13%
+2026-06-21 17:50:05,489 [INFO] Thị trường bình thường.
+2026-06-21 17:50:05,489 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:50:05,958 [INFO] Received command c on object id p0
+2026-06-21 17:50:06,015 [INFO] --- Bắt đầu xử lý Batch ID: 14 (95 events) ---
+2026-06-21 17:50:06,092 [INFO] LOB Snapshot -> Best Bid: 269.80 | Best Ask: 269.90 | Spread: 0.10
+2026-06-21 17:50:06,101 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=2065000.00, imbalance=0.0070, cancel_rate=0.0263
+[Stage 37:>                                                       (0 + 12) / 12][Stage 37:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:50:15,169 [INFO] Xác suất thao túng (ML): 13.13%
+2026-06-21 17:50:15,169 [INFO] Thị trường bình thường.
+2026-06-21 17:50:15,169 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:50:15,627 [INFO] Received command c on object id p0
+2026-06-21 17:50:15,692 [INFO] --- Bắt đầu xử lý Batch ID: 15 (95 events) ---
+2026-06-21 17:50:15,781 [INFO] LOB Snapshot -> Best Bid: 268.50 | Best Ask: 268.60 | Spread: 0.10
+2026-06-21 17:50:15,789 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=2065000.00, imbalance=0.0070, cancel_rate=0.1121
+[Stage 39:>                                                       (0 + 12) / 12][Stage 39:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:50:24,902 [INFO] Xác suất thao túng (ML): 11.37%
+2026-06-21 17:50:24,902 [INFO] Thị trường bình thường.
+2026-06-21 17:50:24,906 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:50:25,391 [INFO] Received command c on object id p0
+2026-06-21 17:50:25,427 [INFO] --- Bắt đầu xử lý Batch ID: 16 (95 events) ---
+2026-06-21 17:50:25,499 [INFO] LOB Snapshot -> Best Bid: 269.00 | Best Ask: 269.10 | Spread: 0.10
+2026-06-21 17:50:25,512 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=2065000.00, imbalance=0.0070, cancel_rate=0.0431
+[Stage 41:>                                                       (0 + 12) / 12][Stage 41:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:50:34,848 [INFO] Xác suất thao túng (ML): 11.37%
+2026-06-21 17:50:34,848 [INFO] Thị trường bình thường.
+2026-06-21 17:50:34,848 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:50:35,397 [INFO] Received command c on object id p0
+2026-06-21 17:50:35,431 [INFO] --- Bắt đầu xử lý Batch ID: 17 (97 events) ---
+2026-06-21 17:50:35,526 [INFO] LOB Snapshot -> Best Bid: 269.00 | Best Ask: 269.10 | Spread: 0.10
+2026-06-21 17:50:35,533 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=3072000.00, imbalance=0.1893, cancel_rate=0.0000
+[Stage 43:>                                                       (0 + 12) / 12][Stage 43:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:50:45,216 [INFO] Xác suất thao túng (ML): 23.31%
+2026-06-21 17:50:45,216 [INFO] Thị trường bình thường.
+2026-06-21 17:50:45,216 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:50:45,740 [INFO] Received command c on object id p0
+2026-06-21 17:50:45,779 [INFO] --- Bắt đầu xử lý Batch ID: 18 (102 events) ---
+2026-06-21 17:50:45,860 [INFO] LOB Snapshot -> Best Bid: 268.80 | Best Ask: 268.90 | Spread: 0.10
+2026-06-21 17:50:45,867 [INFO] [Feature Extraction] spread=0.1000, bid_vol=7387487.00, ask_vol=3072000.00, imbalance=0.4126, cancel_rate=0.0169
+[Stage 45:>                                                       (0 + 12) / 12][Stage 45:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:50:56,030 [INFO] Xác suất thao túng (ML): 93.41%
+2026-06-21 17:50:56,030 [WARNING] CẢNH BÁO: ML Filter phát hiện bất thường. Chuyển cho Layer 2 (C++)...
+2026-06-21 17:50:56,041 [INFO] [SparkEngine] Broadcast LOB state tới 12 workers...
+2026-06-21 17:50:56,055 [INFO] [SparkEngine] Phân phối 200 kịch bản qua Spark RDD (local[*])...
+[Stage 46:>                                                       (0 + 12) / 12][Stage 46:===================================================>    (11 + 1) / 12]                                                                                [Stage 47:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:51:18,004 [INFO] [SparkEngine] Hoàn thành trong 10.3422s. Avg Risk: 27.91, Max Risk: 27.92
+2026-06-21 17:51:18,004 [WARNING] Spark Distributed Alpha-Beta xong trong 10.342s. Avg Risk: 27.91, Max Risk: 27.92
+2026-06-21 17:51:18,004 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:51:18,606 [INFO] Received command c on object id p0
+2026-06-21 17:51:18,694 [INFO] --- Bắt đầu xử lý Batch ID: 19 (320 events) ---
+2026-06-21 17:51:18,998 [INFO] LOB Snapshot -> Best Bid: 269.40 | Best Ask: 269.50 | Spread: 0.10
+2026-06-21 17:51:19,006 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=3093000.00, imbalance=0.1926, cancel_rate=0.0508
+[Stage 50:>                                                       (0 + 12) / 12][Stage 50:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:51:29,727 [INFO] Xác suất thao túng (ML): 34.85%
+2026-06-21 17:51:29,727 [INFO] Thị trường bình thường.
+2026-06-21 17:51:29,727 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:51:30,291 [INFO] Received command c on object id p0
+2026-06-21 17:51:30,339 [INFO] --- Bắt đầu xử lý Batch ID: 20 (114 events) ---
+2026-06-21 17:51:30,448 [INFO] LOB Snapshot -> Best Bid: 269.30 | Best Ask: 269.40 | Spread: 0.10
+2026-06-21 17:51:30,456 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=3093000.00, imbalance=0.1926, cancel_rate=0.0084
+[Stage 52:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:51:41,047 [INFO] Xác suất thao túng (ML): 34.57%
+2026-06-21 17:51:41,047 [INFO] Thị trường bình thường.
+2026-06-21 17:51:41,047 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:51:41,650 [INFO] Received command c on object id p0
+2026-06-21 17:51:41,691 [INFO] --- Bắt đầu xử lý Batch ID: 21 (110 events) ---
+2026-06-21 17:51:41,786 [INFO] LOB Snapshot -> Best Bid: 269.60 | Best Ask: 269.70 | Spread: 0.10
+2026-06-21 17:51:41,797 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2526000.00, ask_vol=3093000.00, imbalance=0.1009, cancel_rate=0.0254
+[Stage 54:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:51:52,250 [INFO] Xác suất thao túng (ML): 26.93%
+2026-06-21 17:51:52,250 [INFO] Thị trường bình thường.
+2026-06-21 17:51:52,250 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:51:52,843 [INFO] Received command c on object id p0
+2026-06-21 17:51:52,894 [INFO] --- Bắt đầu xử lý Batch ID: 22 (110 events) ---
+2026-06-21 17:51:53,012 [INFO] LOB Snapshot -> Best Bid: 268.60 | Best Ask: 268.70 | Spread: 0.10
+2026-06-21 17:51:53,020 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=2065000.00, imbalance=0.0070, cancel_rate=0.0840
+[Stage 56:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:52:04,381 [INFO] Xác suất thao túng (ML): 13.13%
+2026-06-21 17:52:04,381 [INFO] Thị trường bình thường.
+2026-06-21 17:52:04,381 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:52:05,018 [INFO] Received command c on object id p0
+2026-06-21 17:52:05,062 [INFO] --- Bắt đầu xử lý Batch ID: 23 (118 events) ---
+2026-06-21 17:52:05,184 [INFO] LOB Snapshot -> Best Bid: 268.90 | Best Ask: 269.00 | Spread: 0.10
+2026-06-21 17:52:05,190 [INFO] [Feature Extraction] spread=0.1000, bid_vol=2094000.00, ask_vol=3048000.00, imbalance=0.1855, cancel_rate=0.0250
+[Stage 58:>                                                       (0 + 12) / 12][Stage 58:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:52:16,138 [INFO] Xác suất thao túng (ML): 30.56%
+2026-06-21 17:52:16,138 [INFO] Thị trường bình thường.
+2026-06-21 17:52:16,139 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:52:16,716 [INFO] Received command c on object id p0
+2026-06-21 17:52:16,760 [INFO] --- Bắt đầu xử lý Batch ID: 24 (114 events) ---
+2026-06-21 17:52:16,861 [INFO] LOB Snapshot -> Best Bid: 124.50 | Best Ask: 124.70 | Spread: 0.20
+2026-06-21 17:52:16,866 [INFO] [Feature Extraction] spread=0.2000, bid_vol=10582000.00, ask_vol=27376590.00, imbalance=0.4424, cancel_rate=0.8101
+[Stage 60:>                                                       (0 + 12) / 12][Stage 60:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:52:27,809 [INFO] Xác suất thao túng (ML): 71.00%
+2026-06-21 17:52:27,811 [WARNING] CẢNH BÁO: ML Filter phát hiện bất thường. Chuyển cho Layer 2 (C++)...
+2026-06-21 17:52:27,816 [INFO] [SparkEngine] Broadcast LOB state tới 12 workers...
+2026-06-21 17:52:27,829 [INFO] [SparkEngine] Phân phối 200 kịch bản qua Spark RDD (local[*])...
+[Stage 61:>                                                       (0 + 12) / 12][Stage 61:===================================================>    (11 + 1) / 12]                                                                                [Stage 62:>                                                       (0 + 12) / 12][Stage 62:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:52:49,769 [INFO] [SparkEngine] Hoàn thành trong 10.9719s. Avg Risk: 42.38, Max Risk: 42.96
+2026-06-21 17:52:49,769 [WARNING] Spark Distributed Alpha-Beta xong trong 10.972s. Avg Risk: 42.38, Max Risk: 42.96
+2026-06-21 17:52:49,769 [CRITICAL] RED FLAG: Phát hiện Spoofing nguy hiểm dựa trên Game Theory!
+2026-06-21 17:52:49,773 [INFO] Alert published to 0 subscriber(s): SPOOFING
+2026-06-21 17:52:49,780 [INFO] Detection result stored (timestamp=1782039169.78)
+2026-06-21 17:52:49,838 [INFO] LOB snapshot cached: 79 orders, spread=0.20000000000000284
+2026-06-21 17:52:49,838 [WARNING] Kích hoạt Layer 4 (Wash Trading & Shapley Ringleader detection)...
+[GraphAnalyzer] Dựng đồ thị có hướng giao dịch bằng NetworkX...
+[GraphAnalyzer] Đã tìm thấy 1 cụm liên thông mạnh nghi ngờ giao dịch chéo.
+  Cụm 1: ['ACC_1', 'ACC_2', 'ACC_3', 'ACC_RINGLEADER'] — Tổng volume nội bộ: 1,000
+2026-06-21 17:52:49,838 [WARNING] Cụm giao dịch chéo nghi vấn: ['ACC_1', 'ACC_2', 'ACC_3', 'ACC_RINGLEADER']
+2026-06-21 17:52:49,842 [INFO] Detection result stored (timestamp=1782039169.84)
+2026-06-21 17:52:49,842 [INFO] [SparkShapley] Phân tán 1000 hoán vị qua Spark RDD...
+[Stage 64:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:53:00,468 [INFO] [SparkShapley] Hoàn thành trong 10.6261s.
+2026-06-21 17:53:00,508 [WARNING] Kết quả Shapley Value (Spark DataFrame):
+[Stage 65:>                                                       (0 + 12) / 12][Stage 65:===================================================>    (11 + 1) / 12]                                                                                +--------------+-------------+
+|account       |shapley_value|
++--------------+-------------+
+|ACC_RINGLEADER|453.25       |
+|ACC_3         |268.4        |
+|ACC_1         |152.7        |
+|ACC_2         |125.65       |
++--------------+-------------+
+
+[Stage 66:>                                                       (0 + 12) / 12]                                                                                [Stage 67:>                                                       (0 + 12) / 12][Stage 67:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:53:32,425 [CRITICAL] RINGLEADER được xác định: ACC_RINGLEADER
+2026-06-21 17:53:32,432 [INFO] Detection result stored (timestamp=1782039212.43)
+2026-06-21 17:53:32,432 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:53:33,048 [INFO] Received command c on object id p0
+2026-06-21 17:53:33,238 [INFO] --- Bắt đầu xử lý Batch ID: 25 (745 events) ---
+2026-06-21 17:53:33,951 [INFO] LOB Snapshot -> Best Bid: 126.10 | Best Ask: 126.20 | Spread: 0.10
+2026-06-21 17:53:33,958 [INFO] [Feature Extraction] spread=0.1000, bid_vol=6610000.00, ask_vol=9888000.00, imbalance=0.1987, cancel_rate=0.1068
+[Stage 70:>                                                       (0 + 12) / 12][Stage 70:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:53:46,328 [INFO] Xác suất thao túng (ML): 37.30%
+2026-06-21 17:53:46,328 [INFO] Thị trường bình thường.
+2026-06-21 17:53:46,328 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:53:47,322 [INFO] Received command c on object id p0
+2026-06-21 17:53:47,416 [INFO] --- Bắt đầu xử lý Batch ID: 26 (137 events) ---
+2026-06-21 17:53:47,744 [INFO] LOB Snapshot -> Best Bid: 126.30 | Best Ask: 126.40 | Spread: 0.10
+2026-06-21 17:53:47,759 [INFO] [Feature Extraction] spread=0.1000, bid_vol=6610000.00, ask_vol=15011000.00, imbalance=0.3886, cancel_rate=0.0194
+[Stage 72:>                                                       (0 + 12) / 12][Stage 72:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:54:00,621 [INFO] Xác suất thao túng (ML): 75.38%
+2026-06-21 17:54:00,622 [WARNING] CẢNH BÁO: ML Filter phát hiện bất thường. Chuyển cho Layer 2 (C++)...
+2026-06-21 17:54:00,633 [INFO] [SparkEngine] Broadcast LOB state tới 12 workers...
+2026-06-21 17:54:00,650 [INFO] [SparkEngine] Phân phối 200 kịch bản qua Spark RDD (local[*])...
+[Stage 73:>                                                       (0 + 12) / 12][Stage 73:===================================================>    (11 + 1) / 12]                                                                                [Stage 74:>                                                       (0 + 12) / 12][Stage 74:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:54:22,717 [INFO] [SparkEngine] Hoàn thành trong 11.1491s. Avg Risk: 4.76, Max Risk: 5.05
+2026-06-21 17:54:22,717 [WARNING] Spark Distributed Alpha-Beta xong trong 11.149s. Avg Risk: 4.76, Max Risk: 5.05
+2026-06-21 17:54:22,717 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:54:23,222 [INFO] Received command c on object id p0
+2026-06-21 17:54:23,342 [INFO] --- Bắt đầu xử lý Batch ID: 27 (352 events) ---
+2026-06-21 17:54:23,879 [INFO] LOB Snapshot -> Best Bid: 127.40 | Best Ask: 127.50 | Spread: 0.10
+2026-06-21 17:54:23,894 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15896000.00, ask_vol=7276000.00, imbalance=0.3720, cancel_rate=0.1009
+[Stage 77:>                                                       (0 + 12) / 12][Stage 77:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:54:33,601 [INFO] Xác suất thao túng (ML): 46.09%
+2026-06-21 17:54:33,601 [INFO] Thị trường bình thường.
+2026-06-21 17:54:33,601 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:54:34,108 [INFO] Received command c on object id p0
+2026-06-21 17:54:34,148 [INFO] --- Bắt đầu xử lý Batch ID: 28 (106 events) ---
+2026-06-21 17:54:34,300 [INFO] LOB Snapshot -> Best Bid: 127.70 | Best Ask: 127.80 | Spread: 0.10
+2026-06-21 17:54:34,316 [INFO] [Feature Extraction] spread=0.1000, bid_vol=7419000.00, ask_vol=6098000.00, imbalance=0.0977, cancel_rate=0.0270
+[Stage 79:>                                                       (0 + 12) / 12][Stage 79:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:54:43,955 [INFO] Xác suất thao túng (ML): 26.86%
+2026-06-21 17:54:43,955 [INFO] Thị trường bình thường.
+2026-06-21 17:54:43,955 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:54:44,460 [INFO] Received command c on object id p0
+2026-06-21 17:54:44,504 [INFO] --- Bắt đầu xử lý Batch ID: 29 (102 events) ---
+2026-06-21 17:54:44,664 [INFO] LOB Snapshot -> Best Bid: 128.10 | Best Ask: 128.20 | Spread: 0.10
+2026-06-21 17:54:44,680 [INFO] [Feature Extraction] spread=0.1000, bid_vol=6610000.00, ask_vol=15000000.00, imbalance=0.3882, cancel_rate=0.0345
+[Stage 81:>                                                       (0 + 12) / 12][Stage 81:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:54:54,382 [INFO] Xác suất thao túng (ML): 69.11%
+2026-06-21 17:54:54,382 [WARNING] CẢNH BÁO: ML Filter phát hiện bất thường. Chuyển cho Layer 2 (C++)...
+2026-06-21 17:54:54,392 [INFO] [SparkEngine] Broadcast LOB state tới 12 workers...
+2026-06-21 17:54:54,407 [INFO] [SparkEngine] Phân phối 200 kịch bản qua Spark RDD (local[*])...
+[Stage 82:>                                                       (0 + 12) / 12][Stage 82:===================================================>    (11 + 1) / 12]                                                                                [Stage 83:>                                                       (0 + 12) / 12][Stage 83:=================================>                       (7 + 5) / 12]                                                                                2026-06-21 17:55:14,001 [INFO] [SparkEngine] Hoàn thành trong 9.8157s. Avg Risk: 8.55, Max Risk: 9.39
+2026-06-21 17:55:14,001 [WARNING] Spark Distributed Alpha-Beta xong trong 9.816s. Avg Risk: 8.55, Max Risk: 9.39
+2026-06-21 17:55:14,001 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:55:14,563 [INFO] Received command c on object id p0
+2026-06-21 17:55:14,627 [INFO] --- Bắt đầu xử lý Batch ID: 30 (294 events) ---
+2026-06-21 17:55:15,067 [INFO] LOB Snapshot -> Best Bid: 128.60 | Best Ask: 128.70 | Spread: 0.10
+2026-06-21 17:55:15,078 [INFO] [Feature Extraction] spread=0.1000, bid_vol=6610000.00, ask_vol=10975000.00, imbalance=0.2482, cancel_rate=0.0403
+[Stage 86:>                                                       (0 + 12) / 12][Stage 86:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:55:24,736 [INFO] Xác suất thao túng (ML): 60.03%
+2026-06-21 17:55:24,736 [WARNING] CẢNH BÁO: ML Filter phát hiện bất thường. Chuyển cho Layer 2 (C++)...
+2026-06-21 17:55:24,748 [INFO] [SparkEngine] Broadcast LOB state tới 12 workers...
+2026-06-21 17:55:24,762 [INFO] [SparkEngine] Phân phối 200 kịch bản qua Spark RDD (local[*])...
+[Stage 87:>                                                       (0 + 12) / 12][Stage 87:===================================================>    (11 + 1) / 12]                                                                                [Stage 88:>                                                       (0 + 12) / 12][Stage 88:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:55:44,232 [INFO] [SparkEngine] Hoàn thành trong 9.7000s. Avg Risk: 5.61, Max Risk: 9.31
+2026-06-21 17:55:44,232 [WARNING] Spark Distributed Alpha-Beta xong trong 9.700s. Avg Risk: 5.61, Max Risk: 9.31
+2026-06-21 17:55:44,232 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:55:44,744 [INFO] Received command c on object id p0
+2026-06-21 17:55:44,795 [INFO] --- Bắt đầu xử lý Batch ID: 31 (295 events) ---
+2026-06-21 17:55:45,243 [INFO] LOB Snapshot -> Best Bid: 128.00 | Best Ask: 128.10 | Spread: 0.10
+2026-06-21 17:55:45,254 [INFO] [Feature Extraction] spread=0.1000, bid_vol=18002000.00, ask_vol=10975000.00, imbalance=0.2425, cancel_rate=0.0484
+[Stage 91:>                                                       (0 + 12) / 12][Stage 91:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:55:54,961 [INFO] Xác suất thao túng (ML): 53.49%
+2026-06-21 17:55:54,961 [INFO] Thị trường bình thường.
+2026-06-21 17:55:54,961 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:55:55,477 [INFO] Received command c on object id p0
+2026-06-21 17:55:55,535 [INFO] --- Bắt đầu xử lý Batch ID: 32 (105 events) ---
+2026-06-21 17:55:55,681 [INFO] LOB Snapshot -> Best Bid: 128.30 | Best Ask: 128.40 | Spread: 0.10
+2026-06-21 17:55:55,696 [INFO] [Feature Extraction] spread=0.1000, bid_vol=18002000.00, ask_vol=10975000.00, imbalance=0.2425, cancel_rate=0.0242
+[Stage 93:>                                                       (0 + 12) / 12][Stage 93:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:56:05,327 [INFO] Xác suất thao túng (ML): 53.49%
+2026-06-21 17:56:05,328 [INFO] Thị trường bình thường.
+2026-06-21 17:56:05,328 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:56:05,843 [INFO] Received command c on object id p0
+2026-06-21 17:56:05,891 [INFO] --- Bắt đầu xử lý Batch ID: 33 (101 events) ---
+2026-06-21 17:56:06,054 [INFO] LOB Snapshot -> Best Bid: 128.60 | Best Ask: 128.70 | Spread: 0.10
+2026-06-21 17:56:06,074 [INFO] [Feature Extraction] spread=0.1000, bid_vol=18002000.00, ask_vol=17875000.00, imbalance=0.0035, cancel_rate=0.0242
+[Stage 95:>                                                       (0 + 12) / 12][Stage 95:===================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:56:15,681 [INFO] Xác suất thao túng (ML): 26.52%
+2026-06-21 17:56:15,682 [INFO] Thị trường bình thường.
+2026-06-21 17:56:15,682 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:56:16,229 [INFO] Received command c on object id p0
+2026-06-21 17:56:16,274 [INFO] --- Bắt đầu xử lý Batch ID: 34 (101 events) ---
+2026-06-21 17:56:16,428 [INFO] LOB Snapshot -> Best Bid: 128.70 | Best Ask: 128.80 | Spread: 0.10
+2026-06-21 17:56:16,443 [INFO] [Feature Extraction] spread=0.1000, bid_vol=18002000.00, ask_vol=15000000.00, imbalance=0.0910, cancel_rate=0.0081
+[Stage 97:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:56:25,989 [INFO] Xác suất thao túng (ML): 23.92%
+2026-06-21 17:56:25,989 [INFO] Thị trường bình thường.
+2026-06-21 17:56:25,989 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:56:26,519 [INFO] Received command c on object id p0
+2026-06-21 17:56:26,587 [INFO] --- Bắt đầu xử lý Batch ID: 35 (101 events) ---
+2026-06-21 17:56:26,732 [INFO] LOB Snapshot -> Best Bid: 128.40 | Best Ask: 128.50 | Spread: 0.10
+2026-06-21 17:56:26,746 [INFO] [Feature Extraction] spread=0.1000, bid_vol=18002000.00, ask_vol=13725000.00, imbalance=0.1348, cancel_rate=0.0242
+[Stage 99:>                                                       (0 + 12) / 12]                                                                                2026-06-21 17:56:36,408 [INFO] Xác suất thao túng (ML): 24.57%
+2026-06-21 17:56:36,408 [INFO] Thị trường bình thường.
+2026-06-21 17:56:36,408 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:56:37,002 [INFO] Received command c on object id p0
+2026-06-21 17:56:37,074 [INFO] --- Bắt đầu xử lý Batch ID: 36 (102 events) ---
+2026-06-21 17:56:37,245 [INFO] LOB Snapshot -> Best Bid: 128.40 | Best Ask: 128.50 | Spread: 0.10
+2026-06-21 17:56:37,261 [INFO] [Feature Extraction] spread=0.1000, bid_vol=18002000.00, ask_vol=13725000.00, imbalance=0.1348, cancel_rate=0.0000
+[Stage 101:>                                                      (0 + 12) / 12][Stage 101:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:56:46,817 [INFO] Xác suất thao túng (ML): 16.33%
+2026-06-21 17:56:46,817 [INFO] Thị trường bình thường.
+2026-06-21 17:56:46,817 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:56:47,332 [INFO] Received command c on object id p0
+2026-06-21 17:56:47,373 [INFO] --- Bắt đầu xử lý Batch ID: 37 (102 events) ---
+2026-06-21 17:56:47,538 [INFO] LOB Snapshot -> Best Bid: 128.20 | Best Ask: 128.30 | Spread: 0.10
+2026-06-21 17:56:47,558 [INFO] [Feature Extraction] spread=0.1000, bid_vol=18002000.00, ask_vol=13725000.00, imbalance=0.1348, cancel_rate=0.0161
+[Stage 103:>                                                      (0 + 12) / 12]                                                                                2026-06-21 17:56:57,127 [INFO] Xác suất thao túng (ML): 27.33%
+2026-06-21 17:56:57,127 [INFO] Thị trường bình thường.
+2026-06-21 17:56:57,127 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:56:57,641 [INFO] Received command c on object id p0
+2026-06-21 17:56:57,702 [INFO] --- Bắt đầu xử lý Batch ID: 38 (100 events) ---
+2026-06-21 17:56:57,842 [INFO] LOB Snapshot -> Best Bid: 128.00 | Best Ask: 128.10 | Spread: 0.10
+2026-06-21 17:56:57,852 [INFO] [Feature Extraction] spread=0.1000, bid_vol=18002000.00, ask_vol=13725000.00, imbalance=0.1348, cancel_rate=0.0161
+[Stage 105:>                                                      (0 + 12) / 12][Stage 105:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:57:07,404 [INFO] Xác suất thao túng (ML): 24.57%
+2026-06-21 17:57:07,404 [INFO] Thị trường bình thường.
+2026-06-21 17:57:07,404 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:57:07,941 [INFO] Received command c on object id p0
+2026-06-21 17:57:07,980 [INFO] --- Bắt đầu xử lý Batch ID: 39 (101 events) ---
+2026-06-21 17:57:08,149 [INFO] LOB Snapshot -> Best Bid: 128.00 | Best Ask: 128.10 | Spread: 0.10
+2026-06-21 17:57:08,163 [INFO] [Feature Extraction] spread=0.1000, bid_vol=6610000.00, ask_vol=13725000.00, imbalance=0.3499, cancel_rate=0.0000
+[Stage 107:>                                                      (0 + 12) / 12]                                                                                2026-06-21 17:57:17,699 [INFO] Xác suất thao túng (ML): 73.84%
+2026-06-21 17:57:17,699 [WARNING] CẢNH BÁO: ML Filter phát hiện bất thường. Chuyển cho Layer 2 (C++)...
+2026-06-21 17:57:17,713 [INFO] [SparkEngine] Broadcast LOB state tới 12 workers...
+2026-06-21 17:57:17,728 [INFO] [SparkEngine] Phân phối 200 kịch bản qua Spark RDD (local[*])...
+[Stage 108:>                                                      (0 + 12) / 12][Stage 108:==================================================>    (11 + 1) / 12]                                                                                [Stage 109:>                                                      (0 + 12) / 12]                                                                                2026-06-21 17:57:37,047 [INFO] [SparkEngine] Hoàn thành trong 9.6746s. Avg Risk: 6.82, Max Risk: 14.63
+2026-06-21 17:57:37,048 [WARNING] Spark Distributed Alpha-Beta xong trong 9.675s. Avg Risk: 6.82, Max Risk: 14.63
+2026-06-21 17:57:37,048 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:57:37,539 [INFO] Received command c on object id p0
+2026-06-21 17:57:37,631 [INFO] --- Bắt đầu xử lý Batch ID: 40 (289 events) ---
+2026-06-21 17:57:38,069 [INFO] LOB Snapshot -> Best Bid: 128.20 | Best Ask: 128.30 | Spread: 0.10
+2026-06-21 17:57:38,079 [INFO] [Feature Extraction] spread=0.1000, bid_vol=6610000.00, ask_vol=13725000.00, imbalance=0.3499, cancel_rate=0.0161
+[Stage 112:>                                                      (0 + 12) / 12]                                                                                2026-06-21 17:57:47,556 [INFO] Xác suất thao túng (ML): 77.86%
+2026-06-21 17:57:47,556 [WARNING] CẢNH BÁO: ML Filter phát hiện bất thường. Chuyển cho Layer 2 (C++)...
+2026-06-21 17:57:47,571 [INFO] [SparkEngine] Broadcast LOB state tới 12 workers...
+2026-06-21 17:57:47,585 [INFO] [SparkEngine] Phân phối 200 kịch bản qua Spark RDD (local[*])...
+[Stage 113:>                                                      (0 + 12) / 12][Stage 113:==================================================>    (11 + 1) / 12]                                                                                [Stage 114:>                                                      (0 + 12) / 12][Stage 114:=============================================>         (10 + 2) / 12]                                                                                2026-06-21 17:58:07,017 [INFO] [SparkEngine] Hoàn thành trong 9.5688s. Avg Risk: 7.71, Max Risk: 10.88
+2026-06-21 17:58:07,017 [WARNING] Spark Distributed Alpha-Beta xong trong 9.569s. Avg Risk: 7.71, Max Risk: 10.88
+2026-06-21 17:58:07,018 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:58:07,576 [INFO] Received command c on object id p0
+2026-06-21 17:58:07,647 [INFO] --- Bắt đầu xử lý Batch ID: 41 (293 events) ---
+2026-06-21 17:58:08,120 [INFO] LOB Snapshot -> Best Bid: 128.30 | Best Ask: 128.40 | Spread: 0.10
+2026-06-21 17:58:08,132 [INFO] [Feature Extraction] spread=0.1000, bid_vol=6610000.00, ask_vol=13725000.00, imbalance=0.3499, cancel_rate=0.0081
+[Stage 117:>                                                      (0 + 12) / 12][Stage 117:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:58:17,916 [INFO] Xác suất thao túng (ML): 69.06%
+2026-06-21 17:58:17,916 [WARNING] CẢNH BÁO: ML Filter phát hiện bất thường. Chuyển cho Layer 2 (C++)...
+2026-06-21 17:58:17,929 [INFO] [SparkEngine] Broadcast LOB state tới 12 workers...
+2026-06-21 17:58:17,947 [INFO] [SparkEngine] Phân phối 200 kịch bản qua Spark RDD (local[*])...
+[Stage 118:>                                                      (0 + 12) / 12][Stage 118:==================================================>    (11 + 1) / 12]                                                                                [Stage 119:>                                                      (0 + 12) / 12][Stage 119:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:58:37,438 [INFO] [SparkEngine] Hoàn thành trong 9.6665s. Avg Risk: 16.81, Max Risk: 17.05
+2026-06-21 17:58:37,438 [WARNING] Spark Distributed Alpha-Beta xong trong 9.666s. Avg Risk: 16.81, Max Risk: 17.05
+2026-06-21 17:58:37,438 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:58:38,013 [INFO] Received command c on object id p0
+2026-06-21 17:58:38,112 [INFO] --- Bắt đầu xử lý Batch ID: 42 (298 events) ---
+2026-06-21 17:58:38,601 [INFO] LOB Snapshot -> Best Bid: 127.70 | Best Ask: 127.80 | Spread: 0.10
+2026-06-21 17:58:38,616 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=13725000.00, imbalance=0.0585, cancel_rate=0.0484
+[Stage 122:>                                                      (0 + 12) / 12][Stage 122:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:58:47,976 [INFO] Xác suất thao túng (ML): 23.92%
+2026-06-21 17:58:47,976 [INFO] Thị trường bình thường.
+2026-06-21 17:58:47,976 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:58:48,469 [INFO] Received command c on object id p0
+2026-06-21 17:58:48,511 [INFO] --- Bắt đầu xử lý Batch ID: 43 (102 events) ---
+2026-06-21 17:58:48,657 [INFO] LOB Snapshot -> Best Bid: 127.80 | Best Ask: 127.90 | Spread: 0.10
+2026-06-21 17:58:48,674 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=13725000.00, imbalance=0.0585, cancel_rate=0.0081
+[Stage 124:>                                                      (0 + 12) / 12]                                                                                2026-06-21 17:58:58,640 [INFO] Xác suất thao túng (ML): 23.92%
+2026-06-21 17:58:58,640 [INFO] Thị trường bình thường.
+2026-06-21 17:58:58,640 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:58:59,144 [INFO] Received command c on object id p0
+2026-06-21 17:58:59,183 [INFO] --- Bắt đầu xử lý Batch ID: 44 (105 events) ---
+2026-06-21 17:58:59,336 [INFO] LOB Snapshot -> Best Bid: 127.90 | Best Ask: 128.00 | Spread: 0.10
+2026-06-21 17:58:59,346 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=13725000.00, imbalance=0.0585, cancel_rate=0.0081
+[Stage 126:>                                                      (0 + 12) / 12][Stage 126:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:59:08,812 [INFO] Xác suất thao túng (ML): 23.92%
+2026-06-21 17:59:08,813 [INFO] Thị trường bình thường.
+2026-06-21 17:59:08,813 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:59:09,365 [INFO] Received command c on object id p0
+2026-06-21 17:59:09,413 [INFO] --- Bắt đầu xử lý Batch ID: 45 (99 events) ---
+2026-06-21 17:59:09,554 [INFO] LOB Snapshot -> Best Bid: 127.90 | Best Ask: 128.00 | Spread: 0.10
+2026-06-21 17:59:09,571 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=13725000.00, imbalance=0.0585, cancel_rate=0.0000
+[Stage 128:>                                                      (0 + 12) / 12]                                                                                2026-06-21 17:59:18,998 [INFO] Xác suất thao túng (ML): 14.48%
+2026-06-21 17:59:18,998 [INFO] Thị trường bình thường.
+2026-06-21 17:59:18,998 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:59:19,489 [INFO] Received command c on object id p0
+2026-06-21 17:59:19,527 [INFO] --- Bắt đầu xử lý Batch ID: 46 (100 events) ---
+2026-06-21 17:59:19,662 [INFO] LOB Snapshot -> Best Bid: 127.90 | Best Ask: 128.00 | Spread: 0.10
+2026-06-21 17:59:19,677 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=13725000.00, imbalance=0.0585, cancel_rate=0.0000
+[Stage 130:>                                                      (0 + 12) / 12][Stage 130:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:59:29,280 [INFO] Xác suất thao túng (ML): 14.48%
+2026-06-21 17:59:29,280 [INFO] Thị trường bình thường.
+2026-06-21 17:59:29,280 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:59:29,781 [INFO] Received command c on object id p0
+2026-06-21 17:59:29,831 [INFO] --- Bắt đầu xử lý Batch ID: 47 (100 events) ---
+2026-06-21 17:59:29,974 [INFO] LOB Snapshot -> Best Bid: 128.30 | Best Ask: 128.40 | Spread: 0.10
+2026-06-21 17:59:29,989 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=13725000.00, imbalance=0.0585, cancel_rate=0.0323
+[Stage 132:>                                                      (0 + 12) / 12][Stage 132:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:59:39,402 [INFO] Xác suất thao túng (ML): 23.92%
+2026-06-21 17:59:39,402 [INFO] Thị trường bình thường.
+2026-06-21 17:59:39,402 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:59:39,934 [INFO] Received command c on object id p0
+2026-06-21 17:59:39,988 [INFO] --- Bắt đầu xử lý Batch ID: 48 (99 events) ---
+2026-06-21 17:59:40,136 [INFO] LOB Snapshot -> Best Bid: 128.10 | Best Ask: 128.20 | Spread: 0.10
+2026-06-21 17:59:40,144 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=13725000.00, imbalance=0.0585, cancel_rate=0.0161
+[Stage 134:>                                                      (0 + 12) / 12]                                                                                2026-06-21 17:59:49,525 [INFO] Xác suất thao túng (ML): 23.92%
+2026-06-21 17:59:49,525 [INFO] Thị trường bình thường.
+2026-06-21 17:59:49,525 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 17:59:50,031 [INFO] Received command c on object id p0
+2026-06-21 17:59:50,071 [INFO] --- Bắt đầu xử lý Batch ID: 49 (99 events) ---
+2026-06-21 17:59:50,241 [INFO] LOB Snapshot -> Best Bid: 128.00 | Best Ask: 128.10 | Spread: 0.10
+2026-06-21 17:59:50,256 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=13725000.00, imbalance=0.0585, cancel_rate=0.0081
+[Stage 136:>                                                      (0 + 12) / 12][Stage 136:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 17:59:59,719 [INFO] Xác suất thao túng (ML): 23.92%
+2026-06-21 17:59:59,719 [INFO] Thị trường bình thường.
+2026-06-21 17:59:59,719 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:00:00,207 [INFO] Received command c on object id p0
+2026-06-21 18:00:00,263 [INFO] --- Bắt đầu xử lý Batch ID: 50 (100 events) ---
+2026-06-21 18:00:00,394 [INFO] LOB Snapshot -> Best Bid: 127.90 | Best Ask: 128.00 | Spread: 0.10
+2026-06-21 18:00:00,408 [INFO] [Feature Extraction] spread=0.1000, bid_vol=28224305.00, ask_vol=13725000.00, imbalance=0.3456, cancel_rate=0.0081
+[Stage 138:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:00:09,812 [INFO] Xác suất thao túng (ML): 64.08%
+2026-06-21 18:00:09,813 [WARNING] CẢNH BÁO: ML Filter phát hiện bất thường. Chuyển cho Layer 2 (C++)...
+2026-06-21 18:00:09,824 [INFO] [SparkEngine] Broadcast LOB state tới 12 workers...
+2026-06-21 18:00:09,839 [INFO] [SparkEngine] Phân phối 200 kịch bản qua Spark RDD (local[*])...
+[Stage 139:>                                                      (0 + 12) / 12][Stage 139:==================================================>    (11 + 1) / 12]                                                                                [Stage 140:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:00:28,711 [INFO] [SparkEngine] Hoàn thành trong 9.4322s. Avg Risk: 6.21, Max Risk: 6.45
+2026-06-21 18:00:28,711 [WARNING] Spark Distributed Alpha-Beta xong trong 9.432s. Avg Risk: 6.21, Max Risk: 6.45
+2026-06-21 18:00:28,711 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:00:29,237 [INFO] Received command c on object id p0
+2026-06-21 18:00:29,311 [INFO] --- Bắt đầu xử lý Batch ID: 51 (283 events) ---
+2026-06-21 18:00:29,713 [INFO] LOB Snapshot -> Best Bid: 128.50 | Best Ask: 128.60 | Spread: 0.10
+2026-06-21 18:00:29,731 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=13725000.00, imbalance=0.0585, cancel_rate=0.0484
+[Stage 143:>                                                      (0 + 12) / 12][Stage 143:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 18:00:39,308 [INFO] Xác suất thao túng (ML): 23.92%
+2026-06-21 18:00:39,308 [INFO] Thị trường bình thường.
+2026-06-21 18:00:39,308 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:00:39,818 [INFO] Received command c on object id p0
+2026-06-21 18:00:39,874 [INFO] --- Bắt đầu xử lý Batch ID: 52 (104 events) ---
+2026-06-21 18:00:40,038 [INFO] LOB Snapshot -> Best Bid: 128.50 | Best Ask: 128.60 | Spread: 0.10
+2026-06-21 18:00:40,048 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=13725000.00, imbalance=0.0585, cancel_rate=0.0000
+[Stage 145:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:00:49,341 [INFO] Xác suất thao túng (ML): 14.48%
+2026-06-21 18:00:49,341 [INFO] Thị trường bình thường.
+2026-06-21 18:00:49,342 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:00:49,854 [INFO] Received command c on object id p0
+2026-06-21 18:00:49,894 [INFO] --- Bắt đầu xử lý Batch ID: 53 (98 events) ---
+2026-06-21 18:00:50,053 [INFO] LOB Snapshot -> Best Bid: 128.80 | Best Ask: 128.90 | Spread: 0.10
+2026-06-21 18:00:50,066 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=13725000.00, imbalance=0.0585, cancel_rate=0.0242
+[Stage 147:>                                                      (0 + 12) / 12][Stage 147:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 18:00:59,402 [INFO] Xác suất thao túng (ML): 23.92%
+2026-06-21 18:00:59,402 [INFO] Thị trường bình thường.
+2026-06-21 18:00:59,402 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:00:59,898 [INFO] Received command c on object id p0
+2026-06-21 18:00:59,942 [INFO] --- Bắt đầu xử lý Batch ID: 54 (98 events) ---
+2026-06-21 18:01:00,113 [INFO] LOB Snapshot -> Best Bid: 129.10 | Best Ask: 129.20 | Spread: 0.10
+2026-06-21 18:01:00,129 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=19910000.00, imbalance=0.1268, cancel_rate=0.0240
+[Stage 149:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:01:09,525 [INFO] Xác suất thao túng (ML): 24.59%
+2026-06-21 18:01:09,525 [INFO] Thị trường bình thường.
+2026-06-21 18:01:09,526 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:01:10,009 [INFO] Received command c on object id p0
+2026-06-21 18:01:10,048 [INFO] --- Bắt đầu xử lý Batch ID: 55 (99 events) ---
+2026-06-21 18:01:10,197 [INFO] LOB Snapshot -> Best Bid: 129.20 | Best Ask: 129.30 | Spread: 0.10
+2026-06-21 18:01:10,211 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=20490000.00, imbalance=0.1409, cancel_rate=0.0080
+[Stage 151:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:01:19,620 [INFO] Xác suất thao túng (ML): 28.16%
+2026-06-21 18:01:19,620 [INFO] Thị trường bình thường.
+2026-06-21 18:01:19,620 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:01:20,130 [INFO] Received command c on object id p0
+2026-06-21 18:01:20,186 [INFO] --- Bắt đầu xử lý Batch ID: 56 (99 events) ---
+2026-06-21 18:01:20,335 [INFO] LOB Snapshot -> Best Bid: 129.20 | Best Ask: 129.30 | Spread: 0.10
+2026-06-21 18:01:20,351 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=20490000.00, imbalance=0.1409, cancel_rate=0.0000
+[Stage 153:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:01:29,844 [INFO] Xác suất thao túng (ML): 24.63%
+2026-06-21 18:01:29,844 [INFO] Thị trường bình thường.
+2026-06-21 18:01:29,844 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:01:30,321 [INFO] Received command c on object id p0
+2026-06-21 18:01:30,380 [INFO] --- Bắt đầu xử lý Batch ID: 57 (100 events) ---
+2026-06-21 18:01:30,525 [INFO] LOB Snapshot -> Best Bid: 129.60 | Best Ask: 129.70 | Spread: 0.10
+2026-06-21 18:01:30,540 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=21710000.00, imbalance=0.1691, cancel_rate=0.0305
+[Stage 155:>                                                      (0 + 12) / 12][Stage 155:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 18:01:39,832 [INFO] Xác suất thao túng (ML): 33.08%
+2026-06-21 18:01:39,832 [INFO] Thị trường bình thường.
+2026-06-21 18:01:39,832 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:01:40,376 [INFO] Received command c on object id p0
+2026-06-21 18:01:40,416 [INFO] --- Bắt đầu xử lý Batch ID: 58 (98 events) ---
+2026-06-21 18:01:40,561 [INFO] LOB Snapshot -> Best Bid: 129.80 | Best Ask: 129.90 | Spread: 0.10
+2026-06-21 18:01:40,575 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=20510000.00, imbalance=0.1413, cancel_rate=0.0153
+[Stage 157:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:01:49,955 [INFO] Xác suất thao túng (ML): 25.40%
+2026-06-21 18:01:49,955 [INFO] Thị trường bình thường.
+2026-06-21 18:01:49,955 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:01:50,427 [INFO] Received command c on object id p0
+2026-06-21 18:01:50,467 [INFO] --- Bắt đầu xử lý Batch ID: 59 (98 events) ---
+2026-06-21 18:01:50,632 [INFO] LOB Snapshot -> Best Bid: 129.60 | Best Ask: 129.70 | Spread: 0.10
+2026-06-21 18:01:50,648 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15430000.00, ask_vol=6109000.00, imbalance=0.4327, cancel_rate=0.0150
+[Stage 159:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:01:59,928 [INFO] Xác suất thao túng (ML): 49.74%
+2026-06-21 18:01:59,928 [INFO] Thị trường bình thường.
+2026-06-21 18:01:59,928 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:02:00,429 [INFO] Received command c on object id p0
+2026-06-21 18:02:00,466 [INFO] --- Bắt đầu xử lý Batch ID: 60 (98 events) ---
+2026-06-21 18:02:00,612 [INFO] LOB Snapshot -> Best Bid: 129.40 | Best Ask: 129.50 | Spread: 0.10
+2026-06-21 18:02:00,627 [INFO] [Feature Extraction] spread=0.1000, bid_vol=15943000.00, ask_vol=5000000.00, imbalance=0.5225, cancel_rate=0.0150
+[Stage 161:>                                                      (0 + 12) / 12][Stage 161:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 18:02:10,113 [INFO] Xác suất thao túng (ML): 56.17%
+2026-06-21 18:02:10,113 [INFO] Thị trường bình thường.
+2026-06-21 18:02:10,113 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:02:10,661 [INFO] Received command c on object id p0
+2026-06-21 18:02:10,702 [INFO] --- Bắt đầu xử lý Batch ID: 61 (100 events) ---
+2026-06-21 18:02:10,849 [INFO] LOB Snapshot -> Best Bid: 129.60 | Best Ask: 129.70 | Spread: 0.10
+2026-06-21 18:02:10,864 [INFO] [Feature Extraction] spread=0.1000, bid_vol=19176000.00, ask_vol=5367000.00, imbalance=0.5626, cancel_rate=0.0150
+[Stage 163:>                                                      (0 + 12) / 12][Stage 163:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 18:02:20,159 [INFO] Xác suất thao túng (ML): 56.17%
+2026-06-21 18:02:20,159 [INFO] Thị trường bình thường.
+2026-06-21 18:02:20,159 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:02:20,630 [INFO] Received command c on object id p0
+2026-06-21 18:02:20,670 [INFO] --- Bắt đầu xử lý Batch ID: 62 (98 events) ---
+2026-06-21 18:02:20,817 [INFO] LOB Snapshot -> Best Bid: 130.00 | Best Ask: 130.10 | Spread: 0.10
+2026-06-21 18:02:20,832 [INFO] [Feature Extraction] spread=0.1000, bid_vol=19176000.00, ask_vol=22721000.00, imbalance=0.0846, cancel_rate=0.0288
+[Stage 165:>                                                      (0 + 12) / 12][Stage 165:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 18:02:30,102 [INFO] Xác suất thao túng (ML): 81.68%
+2026-06-21 18:02:30,102 [WARNING] CẢNH BÁO: ML Filter phát hiện bất thường. Chuyển cho Layer 2 (C++)...
+2026-06-21 18:02:30,114 [INFO] [SparkEngine] Broadcast LOB state tới 12 workers...
+2026-06-21 18:02:30,131 [INFO] [SparkEngine] Phân phối 200 kịch bản qua Spark RDD (local[*])...
+[Stage 166:>                                                      (0 + 12) / 12][Stage 166:==================================================>    (11 + 1) / 12]                                                                                [Stage 167:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:02:48,961 [INFO] [SparkEngine] Hoàn thành trong 9.4251s. Avg Risk: 11.15, Max Risk: 11.37
+2026-06-21 18:02:48,961 [WARNING] Spark Distributed Alpha-Beta xong trong 9.425s. Avg Risk: 11.15, Max Risk: 11.37
+2026-06-21 18:02:48,961 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:02:49,459 [INFO] Received command c on object id p0
+2026-06-21 18:02:49,544 [INFO] --- Bắt đầu xử lý Batch ID: 63 (281 events) ---
+2026-06-21 18:02:49,980 [INFO] LOB Snapshot -> Best Bid: 130.30 | Best Ask: 130.40 | Spread: 0.10
+2026-06-21 18:02:49,998 [INFO] [Feature Extraction] spread=0.1000, bid_vol=19176000.00, ask_vol=6839000.00, imbalance=0.4742, cancel_rate=0.0213
+[Stage 170:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:02:59,328 [INFO] Xác suất thao túng (ML): 49.74%
+2026-06-21 18:02:59,328 [INFO] Thị trường bình thường.
+2026-06-21 18:02:59,329 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:02:59,833 [INFO] Received command c on object id p0
+2026-06-21 18:02:59,893 [INFO] --- Bắt đầu xử lý Batch ID: 64 (102 events) ---
+2026-06-21 18:03:00,050 [INFO] LOB Snapshot -> Best Bid: 130.40 | Best Ask: 130.50 | Spread: 0.10
+2026-06-21 18:03:00,062 [INFO] [Feature Extraction] spread=0.1000, bid_vol=19176000.00, ask_vol=5403000.00, imbalance=0.5604, cancel_rate=0.0071
+[Stage 172:>                                                      (0 + 12) / 12][Stage 172:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 18:03:09,557 [INFO] Xác suất thao túng (ML): 56.17%
+2026-06-21 18:03:09,557 [INFO] Thị trường bình thường.
+2026-06-21 18:03:09,557 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:03:10,052 [INFO] Received command c on object id p0
+2026-06-21 18:03:10,091 [INFO] --- Bắt đầu xử lý Batch ID: 65 (100 events) ---
+2026-06-21 18:03:10,229 [INFO] LOB Snapshot -> Best Bid: 130.30 | Best Ask: 130.40 | Spread: 0.10
+2026-06-21 18:03:10,247 [INFO] [Feature Extraction] spread=0.1000, bid_vol=19176000.00, ask_vol=5597000.00, imbalance=0.5481, cancel_rate=0.0071
+[Stage 174:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:03:19,664 [INFO] Xác suất thao túng (ML): 56.17%
+2026-06-21 18:03:19,665 [INFO] Thị trường bình thường.
+2026-06-21 18:03:19,665 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:03:20,157 [INFO] Received command c on object id p0
+2026-06-21 18:03:20,260 [INFO] --- Bắt đầu xử lý Batch ID: 66 (99 events) ---
+2026-06-21 18:03:20,409 [INFO] LOB Snapshot -> Best Bid: 130.10 | Best Ask: 130.20 | Spread: 0.10
+2026-06-21 18:03:20,420 [INFO] [Feature Extraction] spread=0.1000, bid_vol=19176000.00, ask_vol=7678000.00, imbalance=0.4282, cancel_rate=0.0142
+[Stage 176:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:03:29,816 [INFO] Xác suất thao túng (ML): 49.74%
+2026-06-21 18:03:29,816 [INFO] Thị trường bình thường.
+2026-06-21 18:03:29,816 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:03:30,333 [INFO] Received command c on object id p0
+2026-06-21 18:03:30,370 [INFO] --- Bắt đầu xử lý Batch ID: 67 (99 events) ---
+2026-06-21 18:03:30,524 [INFO] LOB Snapshot -> Best Bid: 130.20 | Best Ask: 130.30 | Spread: 0.10
+2026-06-21 18:03:30,539 [INFO] [Feature Extraction] spread=0.1000, bid_vol=19176000.00, ask_vol=6074000.00, imbalance=0.5189, cancel_rate=0.0071
+[Stage 178:>                                                      (0 + 12) / 12][Stage 178:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 18:03:39,906 [INFO] Xác suất thao túng (ML): 66.37%
+2026-06-21 18:03:39,906 [WARNING] CẢNH BÁO: ML Filter phát hiện bất thường. Chuyển cho Layer 2 (C++)...
+2026-06-21 18:03:39,921 [INFO] [SparkEngine] Broadcast LOB state tới 12 workers...
+2026-06-21 18:03:39,937 [INFO] [SparkEngine] Phân phối 200 kịch bản qua Spark RDD (local[*])...
+[Stage 179:>                                                      (0 + 12) / 12][Stage 179:==================================================>    (11 + 1) / 12]                                                                                [Stage 180:>                                                      (0 + 12) / 12][Stage 180:=======================>                                (5 + 7) / 12]                                                                                2026-06-21 18:03:59,062 [INFO] [SparkEngine] Hoàn thành trong 9.3815s. Avg Risk: 6.8, Max Risk: 6.81
+2026-06-21 18:03:59,062 [WARNING] Spark Distributed Alpha-Beta xong trong 9.382s. Avg Risk: 6.80, Max Risk: 6.81
+2026-06-21 18:03:59,062 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:03:59,565 [INFO] Received command c on object id p0
+2026-06-21 18:03:59,615 [INFO] --- Bắt đầu xử lý Batch ID: 68 (286 events) ---
+2026-06-21 18:04:00,036 [INFO] LOB Snapshot -> Best Bid: 130.70 | Best Ask: 130.80 | Spread: 0.10
+2026-06-21 18:04:00,053 [INFO] [Feature Extraction] spread=0.1000, bid_vol=19176000.00, ask_vol=5200000.00, imbalance=0.5734, cancel_rate=0.0350
+[Stage 183:>                                                      (0 + 12) / 12][Stage 183:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 18:04:09,581 [INFO] Xác suất thao túng (ML): 66.37%
+2026-06-21 18:04:09,581 [WARNING] CẢNH BÁO: ML Filter phát hiện bất thường. Chuyển cho Layer 2 (C++)...
+2026-06-21 18:04:09,589 [INFO] [SparkEngine] Broadcast LOB state tới 12 workers...
+2026-06-21 18:04:09,603 [INFO] [SparkEngine] Phân phối 200 kịch bản qua Spark RDD (local[*])...
+[Stage 184:>                                                      (0 + 12) / 12][Stage 184:==================================================>    (11 + 1) / 12]                                                                                [Stage 185:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:04:28,422 [INFO] [SparkEngine] Hoàn thành trong 9.3907s. Avg Risk: 16.22, Max Risk: 16.23
+2026-06-21 18:04:28,422 [WARNING] Spark Distributed Alpha-Beta xong trong 9.391s. Avg Risk: 16.22, Max Risk: 16.23
+2026-06-21 18:04:28,422 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:04:28,920 [INFO] Received command c on object id p0
+2026-06-21 18:04:28,978 [INFO] --- Bắt đầu xử lý Batch ID: 69 (287 events) ---
+2026-06-21 18:04:29,437 [INFO] LOB Snapshot -> Best Bid: 131.00 | Best Ask: 131.10 | Spread: 0.10
+2026-06-21 18:04:29,452 [INFO] [Feature Extraction] spread=0.1000, bid_vol=19176000.00, ask_vol=15000000.00, imbalance=0.1222, cancel_rate=0.0203
+[Stage 188:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:04:38,804 [INFO] Xác suất thao túng (ML): 23.92%
+2026-06-21 18:04:38,804 [INFO] Thị trường bình thường.
+2026-06-21 18:04:38,804 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:04:39,320 [INFO] Received command c on object id p0
+2026-06-21 18:04:39,357 [INFO] --- Bắt đầu xử lý Batch ID: 70 (102 events) ---
+2026-06-21 18:04:39,508 [INFO] LOB Snapshot -> Best Bid: 130.70 | Best Ask: 130.80 | Spread: 0.10
+2026-06-21 18:04:39,528 [INFO] [Feature Extraction] spread=0.1000, bid_vol=19176000.00, ask_vol=15000000.00, imbalance=0.1222, cancel_rate=0.0203
+[Stage 190:>                                                      (0 + 12) / 12][Stage 190:==================================================>    (11 + 1) / 12]                                                                                2026-06-21 18:04:48,864 [INFO] Xác suất thao túng (ML): 23.92%
+2026-06-21 18:04:48,864 [INFO] Thị trường bình thường.
+2026-06-21 18:04:48,865 [INFO] --- Batch xử lý hoàn tất ---
+2026-06-21 18:04:49,335 [INFO] Received command c on object id p0
+2026-06-21 18:04:49,965 [INFO] --- Bắt đầu xử lý Batch ID: 71 (86 events) ---
+2026-06-21 18:04:50,094 [INFO] LOB Snapshot -> Best Bid: 130.50 | Best Ask: 130.60 | Spread: 0.10
+2026-06-21 18:04:50,112 [INFO] [Feature Extraction] spread=0.1000, bid_vol=19176000.00, ask_vol=15000000.00, imbalance=0.1222, cancel_rate=0.0135
+[Stage 192:>                                                      (0 + 12) / 12]                                                                                2026-06-21 18:04:59,360 [INFO] Xác suất thao túng (ML): 23.92%
+2026-06-21 18:04:59,360 [INFO] Thị trường bình thường.
+2026-06-21 18:04:59,360 [INFO] --- Batch xử lý hoàn tất ---
+26/06/21 18:09:24 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\Mr Long\AppData\Local\Temp\spark-22321ad1-d978-45a8-9371-e0aa5fd6826f\userFiles-b98aa636-958e-4dbe-b034-8a77ba3a0856
+java.io.IOException: Failed to delete: C:\Users\Mr Long\AppData\Local\Temp\spark-22321ad1-d978-45a8-9371-e0aa5fd6826f\userFiles-b98aa636-958e-4dbe-b034-8a77ba3a0856\redis.clients_jedis-3.9.0.jar
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:147)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:130)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+26/06/21 18:09:24 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\Mr Long\AppData\Local\Temp\spark-22321ad1-d978-45a8-9371-e0aa5fd6826f
+java.io.IOException: Failed to delete: C:\Users\Mr Long\AppData\Local\Temp\spark-22321ad1-d978-45a8-9371-e0aa5fd6826f\userFiles-b98aa636-958e-4dbe-b034-8a77ba3a0856\redis.clients_jedis-3.9.0.jar
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:147)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:130)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:130)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
