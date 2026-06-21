@@ -37,6 +37,8 @@ BigDataProject/
 ├── README.md
 ├── run_pipeline.sh
 ├── streaming_demo.ipynb
+├── Report.pdf
+├── Slide.pdf
 ├── data/
 │   └── replay/
 ├── models/
@@ -226,9 +228,12 @@ train samples        = 50,000
 test samples         = 10,000
 test spoofing ratio  = 2.4%
 accuracy             = 0.8461
-precision            = 0.1177
-recall               = 0.8333
-f1                   = 0.2063
+positive_precision   = 0.1177
+positive_recall      = 0.8333
+positive_f1          = 0.2063
+weighted_precision   = 0.9741
+weighted_recall      = 0.8461
+weighted_f1          = 0.8978
 roc_auc              = 0.9120
 confusion matrix     = [[8261, 1499], [40, 200]]
 ```
@@ -257,9 +262,12 @@ num_trees            = 20
 max_depth            = 6
 train seconds        = 4.57
 accuracy             = 0.7090
+positive_precision   = 0.0710
+positive_recall      = 0.9208
+positive_f1          = 0.1319
 weighted_precision   = 0.9750
 weighted_recall      = 0.7090
-f1                   = 0.8086
+weighted_f1          = 0.8086
 roc_auc              = 0.9107
 confusion matrix     = tn=6869, fp=2891, fn=19, tp=221
 ```
